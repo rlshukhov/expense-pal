@@ -11,6 +11,10 @@
 		4A110B8629A5B1FB00505364 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A110B8529A5B1FB00505364 /* ContentView.swift */; };
 		4A110B8829A5B1FC00505364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A110B8729A5B1FC00505364 /* Assets.xcassets */; };
 		4A110B8B29A5B1FC00505364 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A110B8A29A5B1FC00505364 /* Preview Assets.xcassets */; };
+		4A4F678C29A7EDE2004CA0BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F678E29A7EDE2004CA0BF /* Localizable.strings */; };
+		4A606E3929A836EA008E750E /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A606E3829A836EA008E750E /* AppInfo.swift */; };
+		4A606E3B29A8374F008E750E /* AddExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A606E3A29A8374F008E750E /* AddExpense.swift */; };
+		4A606E3D29A837FF008E750E /* ExpensesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A606E3C29A837FF008E750E /* ExpensesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,15 @@
 		4A110B8529A5B1FB00505364 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A110B8729A5B1FC00505364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A110B8A29A5B1FC00505364 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4A4F678D29A7EDE2004CA0BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A4F678F29A7EDEF004CA0BF /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4A4F679029A7EDF9004CA0BF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A4F679129A7F635004CA0BF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4A4F679229A82B22004CA0BF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4A4F679329A82B4F004CA0BF /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4A606E3829A836EA008E750E /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		4A606E3A29A8374F008E750E /* AddExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpense.swift; sourceTree = "<group>"; };
+		4A606E3C29A837FF008E750E /* ExpensesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +48,10 @@
 		4A110B7729A5B1FB00505364 = {
 			isa = PBXGroup;
 			children = (
+				4A4F679329A82B4F004CA0BF /* LICENSE */,
+				4A4F679129A7F635004CA0BF /* README.md */,
+				4A4F679229A82B22004CA0BF /* .gitignore */,
+				4A4F678E29A7EDE2004CA0BF /* Localizable.strings */,
 				4A110B8229A5B1FB00505364 /* budget */,
 				4A110B8129A5B1FB00505364 /* Products */,
 			);
@@ -55,6 +72,9 @@
 				4A110B8529A5B1FB00505364 /* ContentView.swift */,
 				4A110B8729A5B1FC00505364 /* Assets.xcassets */,
 				4A110B8929A5B1FC00505364 /* Preview Content */,
+				4A606E3829A836EA008E750E /* AppInfo.swift */,
+				4A606E3A29A8374F008E750E /* AddExpense.swift */,
+				4A606E3C29A837FF008E750E /* ExpensesList.swift */,
 			);
 			path = budget;
 			sourceTree = "<group>";
@@ -108,6 +128,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
+				"en-US",
 				Base,
 			);
 			mainGroup = 4A110B7729A5B1FB00505364;
@@ -126,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A110B8B29A5B1FC00505364 /* Preview Assets.xcassets in Resources */,
+				4A4F678C29A7EDE2004CA0BF /* Localizable.strings in Resources */,
 				4A110B8829A5B1FC00505364 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,12 +160,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A606E3D29A837FF008E750E /* ExpensesList.swift in Sources */,
+				4A606E3B29A8374F008E750E /* AddExpense.swift in Sources */,
 				4A110B8629A5B1FB00505364 /* ContentView.swift in Sources */,
 				4A110B8429A5B1FB00505364 /* budgetApp.swift in Sources */,
+				4A606E3929A836EA008E750E /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4A4F678E29A7EDE2004CA0BF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A4F678D29A7EDE2004CA0BF /* en */,
+				4A4F678F29A7EDEF004CA0BF /* en-US */,
+				4A4F679029A7EDF9004CA0BF /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4A110B8C29A5B1FC00505364 /* Debug */ = {
@@ -270,11 +309,14 @@
 				DEVELOPMENT_TEAM = H4Z5ZQCN7U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ExpensePal;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +324,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rlshukhov.budget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,11 +344,14 @@
 				DEVELOPMENT_TEAM = H4Z5ZQCN7U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ExpensePal;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +359,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rlshukhov.budget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

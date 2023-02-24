@@ -7,15 +7,18 @@
 
 import SwiftUI
 
+struct Expense: Identifiable, Codable {
+    var id = UUID()
+    var category: String
+    var amount: Double
+    var date: Date
+}
+
 struct ContentView: View {
+    let viewModel = ExpensesListViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        ExpensesListView(viewModel: viewModel)
     }
 }
 
@@ -24,3 +27,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

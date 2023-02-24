@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  budget
+
+  Created by Lane Shukhov on 23.02.2023.
+  
+*/
+
+"addExpenses" = "Add expenses";
+"category" = "Category";
+"enterExpenseCategory" = "Enter expense category";
+"amount" = "Amount";
+"enterExpenseAmount" = "Enter expense amount";
+"expenses" = "Expenses";
+"noExpenses" = "No expenses";
+"save" = "Save";
+"totalAmount" = "Total amount:";
+"date" = "Date";
+"total" = "Total";
+"about" = "About";
+"description" = "This application saves the expenses of the last month. Expenses older than a month are automatically deleted.";
+"ai-powered" = "The application is created using neural networks, with minimal human involvement.";
+"deleteAll" = "Remove all";
+"sure" = "Are you sure you want to delete all the data?";
+"cannotUndone" = "This action cannot be undone.";
+"yes" = "Yes";
+"no" = "No";
