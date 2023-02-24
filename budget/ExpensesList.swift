@@ -27,8 +27,17 @@ class ExpensesListViewModel: ObservableObject {
         }
     }
     
-    func removeExpense(at offsets: IndexSet) {
-        expenses.remove(atOffsets: offsets)
+    func removeExpense(ids: [UUID]) {
+        if let index = expenses.firstIndex(where: { ids.contains($0.id) }) {
+            expenses.remove(at: index)
+        }
+        
+        self.saveExpensesToUserDefaults(expenses: expenses)
+    }
+    
+    func removeAllExpenses() {
+        expenses.remove(atOffsets: IndexSet(integersIn: 0..<expenses.count))
+        
         self.saveExpensesToUserDefaults(expenses: expenses)
     }
     
@@ -108,7 +117,18 @@ struct ExpensesListView: View {
                                 }
                             }
                         }
-                        .onDelete(perform: delete)
+                        .onDelete(perform: { offsets in
+                            let items = viewModel.expenses.sorted { $0.date > $1.date }
+                            let itemsToDelete = offsets.map({ items[$0] })
+                            
+                            var idsToDelete: [UUID] = []
+                            
+                            itemsToDelete.forEach { item in
+                                idsToDelete.append(item.id)
+                            }
+                            
+                            viewModel.removeExpense(ids: idsToDelete)
+                        })
                     }
                     
                 }
@@ -126,7 +146,7 @@ struct ExpensesListView: View {
                             let alert = UIAlertController(title: NSLocalizedString("sure", comment: ""), message: NSLocalizedString("cannotUndone", comment: ""), preferredStyle: .alert)
                             
                             alert.addAction(UIAlertAction(title: NSLocalizedString("yes", comment: ""), style: .destructive, handler: { _ in
-                                viewModel.removeExpense(at: IndexSet(integersIn: 0..<viewModel.expenses.count))
+                                viewModel.removeAllExpenses()
                             }))
                             alert.addAction(UIAlertAction(title: NSLocalizedString("no", comment: ""), style: .cancel))
                             
@@ -152,10 +172,6 @@ struct ExpensesListView: View {
         .popover(isPresented: $showAbout) {
             AppInfoView()
         }
-    }
-    
-    private func delete(at offsets: IndexSet) {
-        viewModel.removeExpense(at: offsets)
     }
 }
 

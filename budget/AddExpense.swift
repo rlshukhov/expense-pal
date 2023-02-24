@@ -59,15 +59,18 @@ struct AddExpenseView: View {
             .navigationBarTitle(NSLocalizedString("addExpenses", comment: ""))
             .navigationBarItems(trailing:
                 Button(NSLocalizedString("save", comment: "")) {
-                if let amount = Double(self.amount.replacingOccurrences(of: ",", with: ".")) {
+                if let amount = Double(self.amount.replacingOccurrences(of: ",", with: ".").trimmingCharacters(in: .whitespacesAndNewlines)) {
+                    
+                    let category = self.category.trimmingCharacters(in: .whitespacesAndNewlines)
+                    
                     if self.expense != nil {
-                        viewModel.updateExpense(expense: Expense(id: self.expense!.id, category: self.category, amount: amount, date: self.date))
+                        viewModel.updateExpense(expense: Expense(id: self.expense!.id, category: category, amount: amount, date: self.date))
                         
                         self.presentationMode.wrappedValue.dismiss()
                         return
                     }
                     
-                    self.viewModel.addExpense(category: self.category, amount: amount, date: self.date)
+                    self.viewModel.addExpense(category: category, amount: amount, date: self.date)
                     self.presentationMode.wrappedValue.dismiss()
                 }
                 }
